@@ -1,0 +1,27 @@
+{
+  "name": "sun-otc-open-sdk/sun-otc",
+  "description": "php-sdk for SunOTC",
+  "license": "MIT",
+  "homepage": "https://github.com/sunOTC/sunotc-open-sdk-php",
+  "type": "library",
+  "require": {
+    "php": ">=7.1",
+    "rmccue/requests": "^1.7",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-openssl": "*"
+  },
+
+  "authors": [
+    {
+      "name": "SunOTC",
+      "email": "sunOTC@protonmail.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "SunOtc\\": "src/"
+    }
+  }
+}
