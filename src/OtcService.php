@@ -12,7 +12,7 @@ class OtcService
 
     private $priKey = null;
 
-    const HOST = "api.sunotc.com";
+    const HOST = "https://api.sunotc.com";
 
     /**
      * OtcService constructor.
