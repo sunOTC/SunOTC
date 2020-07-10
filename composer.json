@@ -1,8 +1,8 @@
 {
-  "name": "sun-otc-open-sdk/sun-otc",
+  "name": "SunOTC-open",
   "description": "php-sdk for SunOTC",
   "license": "MIT",
-  "homepage": "https://github.com/sunOTC/sunotc-open-sdk-php",
+  "homepage": "https://github.com/sunOTC/sunotc-open",
   "type": "library",
   "require": {
     "php": ">=7.1",
