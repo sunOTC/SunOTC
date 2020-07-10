@@ -1,5 +1,5 @@
 {
-  "name": "sun-otc-open",
+  "name": "sun-otc/sun-otc-open",
   "description": "php-sdk for SunOTC",
   "license": "MIT",
   "homepage": "https://github.com/sunOTC/sunotc-open",
