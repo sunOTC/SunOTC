@@ -30,35 +30,11 @@ use SunOTC\SunOTC;
     $data       = '{"app_id":"123","coin":"USDT"}';
     $OtcService = (new SunOTC('', Dictionary::PRI_KEY));
     $OtcService->getTradePrice($data);
-        
-        
-//返回数据
-$address_info  = '{
-                      "code":0,
-                      "message":"success",
-                      "data":[
-                          {
-                              "pay_type":"BANK",
-                              "amount_min":1000,
-                              "amount_max":5000
-                          },
-                          {
-                              "pay_type":"WECHAT",
-                              "amount_min":1000,
-                              "amount_max":5000
-                          },
-                          {
-                              "pay_type":"ALIPAY  ",
-                              "amount_min":1000,
-                              "amount_max":5000
-                          }
-                      ],
-                      "time":1592729822
-                  }'；
+       
 ```
 
 ### 链接
-* 
+* https://docs.sunotc.com
 
 
 
