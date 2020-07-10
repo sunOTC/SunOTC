@@ -15,13 +15,13 @@
   "authors": [
     {
       "name": "SunOTC",
-      "email": "sunOTC@protonmail.com"
+      "email": "admin@sunotc.com"
     }
   ],
 
   "autoload": {
     "psr-4": {
-      "SunOtc\\": "src/"
+      "SunOTC\\": "src/"
     }
   }
 }

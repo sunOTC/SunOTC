@@ -1,11 +1,11 @@
 <?php
 /**
- * Rsa.php
+ * RSA.php
  */
 
-namespace SunOtc;
+namespace SunOTC;
 
-class Rsa
+class RSA
 {
 
     private $pubKey = null;

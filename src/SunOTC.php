@@ -1,11 +1,11 @@
 <?php
 /**
- * OtcService.php
+ * SunOTC.php
  */
 
-namespace SunOtc;
+namespace SunOTC;
 
-class OtcService
+class SunOTC
 {
 
     private $pubKey = null;
@@ -33,7 +33,7 @@ class OtcService
      */
     public function subOrderMsg($param)
     {
-        $result = $this->getResut("/api/v1/order", $param);
+        $result = $this->getResult("/api/v1/order", $param);
         return $result;
     }
 
@@ -44,7 +44,7 @@ class OtcService
      */
     public function getOrderMsg($param)
     {
-        return $this->getResut("/api/v1/order/message", $param);
+        return $this->getResult("/api/v1/order/message", $param);
     }
 
     /**
@@ -54,7 +54,7 @@ class OtcService
      */
     public function getTradeLimit($param)
     {
-        return $this->getResut("/api/v1/trade/limit", $param);
+        return $this->getResult("/api/v1/trade/limit", $param);
     }
 
     /**
@@ -64,7 +64,7 @@ class OtcService
      */
     public function getTradePrice($param)
     {
-        return $this->getResut("/api/v1/trade/price", $param);
+        return $this->getResult("/api/v1/trade/price", $param);
     }
 
     /**
@@ -74,7 +74,7 @@ class OtcService
      */
     public function getMercAsset($param)
     {
-        return $this->getResut("/api/v1/merc/assets", $param);
+        return $this->getResult("/api/v1/merc/assets", $param);
     }
 
 
@@ -84,7 +84,7 @@ class OtcService
      * @param $param
      * @return bool|string
      */
-    public function getResut($url, $param)
+    public function getResult($url, $param)
     {
         $param = json_decode($param, true);
         $param["timestamp"] = time();
@@ -106,7 +106,7 @@ class OtcService
      */
     public function getSign($param)
     {
-        $rsaObject = (new Rsa("", $this->priKey));
+        $rsaObject = (new RSA("", $this->priKey));
         return $rsaObject->sign(md5($param));
 
     }
