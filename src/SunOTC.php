@@ -13,15 +13,19 @@ class SunOTC
     private $priKey = null;
 
     const HOST = "https://api.sunotc.com";
+    /**
+     * @var string
+     */
+    private $app_id;
 
     /**
      * OtcService constructor.
-     * @param string $pubKey
+     * @param string $app_id
      * @param string $priKey
      */
-    function __construct($pubKey = "", $priKey = "")
+    function __construct($app_id = "", $priKey = "")
     {
-        $this->pubKey = $pubKey;
+        $this->app_id = $app_id;
         $this->priKey = $priKey;
     }
 
@@ -87,6 +91,7 @@ class SunOTC
     public function getResult($url, $param)
     {
         $param = json_decode($param, true);
+        $param["app_id"] = $this->app_id;
         $param["timestamp"] = time();
         $param = json_encode($param, JSON_UNESCAPED_UNICODE);
         $signer = $this->getSign($param);
